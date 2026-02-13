@@ -157,6 +157,14 @@ nav .right a span {
     font-size: 18px;
 }
 
+/* section 3: (invidual and team projects) testimony*/
+.testimony-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+/*paused on 43:49*/
+
 /*with screen smaller than 850pz*/
 @media (max-width: 850px) {
     /*section 1: hero*/
