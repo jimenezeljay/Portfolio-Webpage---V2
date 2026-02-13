@@ -2,6 +2,7 @@
     --text-color: #4A4A48;
     --link-color: #4a76ee;
     --background-color: #eeeff1;
+    --hehehe-green: #A4C2A5;
 }
 
 /*this is a comment*/
@@ -215,6 +216,58 @@ section 3: (invidual and team projects) testimony
     font-weight: normal;
 }
 
+/* 
+==================
+section 4: contact
+==================
+*/
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+        flex: 3;
+        margin-top: 20px;
+}
+
+.contact-section .group form {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: Poppins, sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button {
+    font-style: 16px;
+    font-family: Poppins, sans-serif;
+    color: white;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover {
+    filter: birghtness(.9);
+}
+
 
 
 /*with screen smaller than 850pz*/
@@ -240,6 +293,11 @@ section 3: (invidual and team projects) testimony
 
     .testimony-section .group {
     flex-direction: column;
+    }
+
+    /*section 4: contact*/
+    .contact-section .group {
+        flex-direction: column;
     }
 }
 
@@ -280,5 +338,15 @@ section 3: (invidual and team projects) testimony
 
     .skills-section .cells .cell {
         font-style: 16px;
+    }
+
+    /*section 3: testimony*/
+    .testimony-section {
+        padding: 0 20px;
+    }
+
+    /*section 4: contact*/
+    .contact-section{
+        padding: 0 20px;
     }
 }
