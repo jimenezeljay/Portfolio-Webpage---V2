@@ -61,7 +61,12 @@ nav .right a span {
     margin-left: 5px;
 }
 
-/*section 1: hero*/
+/*
+================
+section 1: hero
+================
+
+*/
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -111,7 +116,12 @@ nav .right a span {
     border-radius: 75%;
 }
 
-/*section 2: skills*/
+/*
+=================
+section 2: skills
+=================
+
+*/
 .skills-section {
     padding: 0 px 50px;
     margin-bottom: 100px;
@@ -157,13 +167,55 @@ nav .right a span {
     font-size: 18px;
 }
 
-/* section 3: (invidual and team projects) testimony*/
+/* 
+=================================================
+section 3: (invidual and team projects) testimony
+=================================================
+*/
 .testimony-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-/*paused on 43:49*/
+.testimony-section h2 {
+    font-style: 35px;
+    margin-bottom: 30px;
+}
+
+.testimony-section .group {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+/*has 20 % of the space rights*/
+.testimony-section .group .person-details {
+    text-align: center;
+    flex: 2;
+}
+
+/*has 80 % of the space rights*/
+.testimony-section .group .text {
+    flex: 8;
+}
+
+.testimony-section .group .person-details img {
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimony-section .group .person-details p {
+    font-weight: 600;
+}
+
+.testimony-section .group .person-details p:last-child {
+    font-weight: normal;
+}
+
+
 
 /*with screen smaller than 850pz*/
 @media (max-width: 850px) {
@@ -179,6 +231,15 @@ nav .right a span {
     /*section 1: hero*/
     .hero-section {
         flex-direction: column-reverse;
+    }
+
+    /*section 3: testimony*/
+    .testimony-section {
+        text-align: center;
+    }
+
+    .testimony-section .group {
+    flex-direction: column;
     }
 }
 
