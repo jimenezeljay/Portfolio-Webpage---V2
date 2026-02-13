@@ -105,12 +105,28 @@ nav .right a span {
   justify-content: right;
 }
 
+/*image made into circle*/
 .hero-section .headshot img {
     width: 350px;
-    border-radius: 50%;
+    border-radius: 75%;
+}
+
+/*with screen smaller than 850pz*/
+@media (max-width: 850px) {
+    /*section 1: hero*/
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
 }
 
 
+/* puts image on top of text */
+@media (max-width: 740px) {
+    /*section 1: hero*/
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+}
 
 @media (max-width: 600px) {
     /*navbar*/
@@ -131,5 +147,14 @@ nav .right a span {
     nav .right a span {
         display: none;
 
+    }
+
+    /* section 1: hero */
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 28px;
     }
 }
