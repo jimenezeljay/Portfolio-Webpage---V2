@@ -34,6 +34,9 @@ nav {
     display : flex;
     justify-content: space-between;
     align-items: center;
+    /*sticky implementation*/
+    position: sticky;
+    top: 0;
 
     padding: 0 50px;
     height: 80px;
@@ -280,7 +283,7 @@ section 4: contact
 
 
 /* puts image on top of text */
-@media (max-width: 740px) {
+@media (max-width: 740px) { 
     /*section 1: hero*/
     .hero-section {
         flex-direction: column-reverse;
