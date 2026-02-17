@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /*helps with the jumping to links to show the section header still*/
 }
 
 body {
@@ -187,10 +188,75 @@ section 2: skills
 
 /* 
 =================================================
-section 3 & 4: invidual + team projects
+section 3 & 4: individual + team projects
 =================================================
 */
-.project-section
+.project-section {
+    padding: 0 50px;
+    margin-bottom: 80px;
+}
+
+.project-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.project-section .text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.project-card {
+    display: block;
+    width: 300px;
+    background-color: var(--link-color);
+    border: 3px solid var(--border-color);
+    border-radius: 9px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.project-card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3 ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: var(--link-color)
+}
+
+/*for the individual project section - I'll center it since it's just a single card*/
+#individual-project .project-gallery {
+    justify-content: center;
+}
+
+#individual-project .project-card {
+    width: 300px;
+}
 
 /* 
 ==================
@@ -246,7 +312,7 @@ section 4: contact
 
 
 
-/*with screen smaller than 850pz*/
+/*with screen smaller than 850pz + responsive*/
 @media (max-width: 850px) {
     /*section 1: hero*/
     .hero-section .text h2 {
@@ -255,23 +321,19 @@ section 4: contact
 }
 
 
-/* puts image on top of text */
+/* puts image on top of text + responsive */
 @media (max-width: 740px) { 
     /*section 1: hero*/
     .hero-section {
         flex-direction: column-reverse;
     }
 
-    /*section 3: testimony*/
-    .testimony-section {
-        text-align: center;
+    /*section 3 + 4*/
+    .project-card {
+        width: 100%;
     }
 
-    .testimony-section .group {
-    flex-direction: column;
-    }
-
-    /*section 4: contact*/
+    /*section 5: contact*/
     .contact-section .group {
         flex-direction: column;
     }
@@ -316,13 +378,17 @@ section 4: contact
         font-style: 16px;
     }
 
-    /*section 3: testimony*/
-    .testimony-section {
+    /*section 3 + 4*/
+    .project-section {
         padding: 0 20px;
     }
 
-    /*section 4: contact*/
+    /*section 5: contact*/
     .contact-section{
         padding: 0 20px;
+    }
+
+    footer {
+        padding: 20px;
     }
 }
