@@ -228,8 +228,10 @@ section 3 & 4: individual + team projects
 }
 
 .project-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 300px;
+    min-height: 280px;
     background-color: var(--link-color);
     border: 3px solid var(--border-color);
     border-radius: 9px;
@@ -240,9 +242,10 @@ section 3 & 4: individual + team projects
 }
 
 .project-card img {
-    height: 180px;
+    height: 250px;
     width: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.3 ease;
 }
@@ -253,6 +256,10 @@ section 3 & 4: individual + team projects
 
 .project-info {
     padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-info p {
